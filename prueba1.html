@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Bienvenida</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente el contenido */
+            align-items: center; /* Centra verticalmente el contenido */
+            min-height: 100vh; /* Asegura que la página ocupe al menos el 100% de la altura de la ventana */
+            background-color: #f0f0f0; /* Un color de fondo suave para probar */
+            overflow: hidden; /* Evita barras de desplazamiento si la imagen es muy grande */
+        }
+
+        .container {
+            position: relative; /* Esencial para posicionar el botón absolutamente dentro de él */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* No le damos un tamaño fijo aquí, se ajustará a la imagen */
+        }
+
+        .imagen-sobre {
+            max-width: 90vw; /* Ajusta el tamaño de la imagen al 90% del ancho de la ventana */
+            height: auto;
+            display: block; /* Elimina cualquier espacio extra debajo de la imagen */
+        }
+
+        .boton-invisible {
+            position: absolute; /* Posiciona el botón respecto al .container */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centra el botón exactamente en el medio */
+            opacity: 0; /* Hace el botón completamente invisible */
+            cursor: pointer; /* Cambia el cursor a una mano para indicar que es clicable */
+            z-index: 10; /* Asegura que el botón esté por encima de la imagen */
+            width: 50%; /* Puedes ajustar el ancho del área clicable */
+            height: 50%; /* Puedes ajustar el alto del área clicable */
+            /* Si la imagen del sobre tiene un tamaño conocido, puedes usar píxeles aquí:
+               width: 300px;
+               height: 200px;
+            */
+            background-color: rgba(255, 0, 0, 0); /* Fondo transparente, puedes poner un color con opacidad baja (ej. 0.1) para depurar */
+            border: none; /* Quita el borde predeterminado del botón */
+        }
+
+       /* .boton-invisible:hover {
+            /* Opcional: Para depurar, puedes poner una opacidad muy baja al pasar el ratón */
+            /* opacity: 0.05; 
+        }*/
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="sobre.png" alt="Sobre con sello de Abrir" class="imagen-sobre">
+
+        <a href="invitacion_fernanda.html" class="boton-invisible" aria-label="Abrir invitación">
+            <span></span>
+        </a>
+    </div>
+
+</body>
+</html>
